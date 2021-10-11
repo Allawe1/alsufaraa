@@ -1,0 +1,91 @@
+.home h2{
+    text-align: center;
+    color: red;
+}
+
+.span{
+    font-size: 21px;
+     color: #c6a07c;
+      font-family: 'Open Sans';
+}
+.separator {
+    position: relative;
+    display: block;
+    height: 1px;
+    background-color: #eaeaea;
+    margin: 10px auto 20px;
+    width: 50px;
+}
+.separator.small {
+    background-color: #c7a17a;
+    height: 2px;
+    position: relative;
+    width: 70px;
+    display: block;
+    margin: 10px auto 20px;
+}
+
+element.style {
+    min-height: 244px;
+    padding-top: 0px;
+}
+/* @media only screen and (max-width: 1000px) */
+.content, .content.content_top_margin {
+    margin-top: 0!important;
+}
+
+/* @media only screen and (max-width: 1000px) */
+.content {
+    margin-bottom: 0!important;
+}
+.content {
+    margin-top: -132px;
+}
+body, .wrapper, .content, .full_width, .overlapping_content .content > .container, .more_facts_holder, .comment_holder .comment #respond textarea, .comment_holder .comment #respond input[type='text'], .comment_holder .comment #respond input[type='email'], .content .container {
+    background-color: #ffffff;
+}
+.content {
+    margin-top: 0;
+}
+.container, .content, .full_width {
+    z-index: 100;
+    position: relative;
+}
+.content, .content .container, .full_width {
+    background-color: #f6f6f6;
+}
+a, abbr, acronym, address, applet, b, big, blockquote, body, caption, center, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt, u, ul, var {
+    background: 0 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    outline: 0;
+}
+
+div {
+    display: block;
+}
+body {
+    font-family: 'Signika', sans-serif;
+    color: #666666;
+    font-size: 15px;
+    font-weight: 400;
+}
+body {
+    font-family: Raleway,sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    color: #818181;
+    font-weight: 400;
+    overflow-y: scroll;
+    overflow-x: hidden!important;
+    -webkit-font-smoothing: antialiased;
+}
+::selection {
+    background: #30271c;
+}
+::selection {
+    background: #1abc9c;
+    color: #fff;
+}
