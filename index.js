@@ -38,7 +38,7 @@ const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, '/client')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/client/src', 'index.html'));
+  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
 });
 
 const run = async () => {
