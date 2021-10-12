@@ -48,7 +48,7 @@ export function ProductCard(props) {
             className={classes.media}
             image={
               props.img != ""
-                ? `http://localhost:5000/images/${props.img}`
+                ? `https://alsufraa.herokuapp.com/images/${props.img}`
                 : product1
             }
             title={props.img}
