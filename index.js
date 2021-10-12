@@ -63,7 +63,7 @@ const run = async () => {
 }
 run()
 
-app.listen(PORT, () => console.log(`AdminBro is under localhost:${PORT}/admin`))
+
   
 app.use("/api/product", productRouter);
 app.use("/api/bestSelling", bestSellingsRouter);
@@ -76,11 +76,11 @@ app.get('*', (req, res) => {
 });
 console.log(__dirname , '2');
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.send("hello to home");
 });
 
-
+app.listen(PORT, () => console.log(`AdminBro is under localhost:${PORT}/admin`))
 
   
 
