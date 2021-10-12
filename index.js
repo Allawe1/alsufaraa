@@ -64,10 +64,10 @@ run()
 
 app.listen(PORT, () => console.log(`AdminBro is under localhost:${PORT}/admin`))
   
-app.use(express.static(path.join(__dirname, '../client/src')));
+app.use(express.static(path.join(__dirname, '../client/public')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/src', 'index.html'));
+  res.sendFile(path.join(__dirname, '../client/public', 'index.html'));
 });
 
 app.get("/", (req, res) => {
