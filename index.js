@@ -35,7 +35,7 @@ const PORT = process.env.PORT || 5000;
 console.log(PORT);
 const __dirname = path.resolve();
 
-app.use(express.static(path.join(__dirname, '/client')));
+
 
 
 
@@ -64,8 +64,10 @@ run()
 
 app.listen(PORT, () => console.log(`AdminBro is under localhost:${PORT}/admin`))
   
+app.use(express.static(path.join(__dirname, '../client/build')));
+
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });
 
 app.get("/", (req, res) => {
