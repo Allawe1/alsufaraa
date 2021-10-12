@@ -37,9 +37,7 @@ const __dirname = path.resolve();
 
 app.use(express.static(path.join(__dirname, '/client')));
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
-});
+
 
 const run = async () => {
   const connection = await  Mongoose.connect(Db_URL, {
@@ -66,7 +64,9 @@ run()
 
 app.listen(PORT, () => console.log(`AdminBro is under localhost:${PORT}/admin`))
   
-
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+});
 
 app.get("/", (req, res) => {
   res.send("hello to home");
