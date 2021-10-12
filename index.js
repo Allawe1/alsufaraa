@@ -14,6 +14,7 @@ import AdminBroMongoose from '@admin-bro/mongoose'
 import {addImage} from './controllers/products.js'
 import uploadFeature  from '@admin-bro/upload'
 import path from "path";
+import { log } from "console";
 
 
 AdminBro.registerAdapter(AdminBroMongoose)
@@ -32,7 +33,7 @@ const Db_URL =
   "mongodb+srv://ali:ali123@cluster0.qef8w.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 const PORT = process.env.PORT || 5000;
-console.log(PORT);
+
 const __dirname = path.resolve();
 
 
@@ -65,10 +66,11 @@ run()
 app.listen(PORT, () => console.log(`AdminBro is under localhost:${PORT}/admin`))
   
 app.use(express.static(path.join(__dirname, '../client/public')));
-
+console.log(__dirname , '1');
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/public', 'index.html'));
 });
+console.log(__dirname , '2');
 
 app.get("/", (req, res) => {
   res.send("hello to home");
