@@ -32,7 +32,7 @@ const Db_URL =
   "mongodb+srv://ali:ali123@cluster0.qef8w.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 const PORT = process.env.PORT || 5000;
-
+console.log(PORT);
 const __dirname = path.resolve();
 
 app.use(express.static(path.join(__dirname, '/client')));
@@ -64,7 +64,7 @@ const run = async () => {
 }
 run()
 
-app.listen(5000, () => console.log(`AdminBro is under localhost:${PORT}/admin`))
+app.listen(PORT, () => console.log(`AdminBro is under localhost:${PORT}/admin`))
   
 
 
