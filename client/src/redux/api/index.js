@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const url = "https://alsufraa.herokuapp.com/"
+const url = "https://alsufraa.herokuapp.com/api/"
 
 
 

@@ -75,9 +75,9 @@ console.log(__dirname , '2');
 app.get("/", (req, res) => {
   res.send("hello to home");
 });
-app.use("/product", productRouter);
-app.use("/bestSelling", bestSellingsRouter);
-app.use("/productGategorys", productGategorysRouter);
+app.use("/api/product", productRouter);
+app.use("/api/bestSelling", bestSellingsRouter);
+app.use("/api/productGategorys", productGategorysRouter);
 
 
   
