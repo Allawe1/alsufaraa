@@ -65,6 +65,10 @@ run()
 
 app.listen(PORT, () => console.log(`AdminBro is under localhost:${PORT}/admin`))
   
+app.use("/api/product", productRouter);
+app.use("/api/bestSelling", bestSellingsRouter);
+app.use("/api/productGategorys", productGategorysRouter);
+
 app.use(express.static(path.join('client/build')));
 console.log(__dirname , '1');
 app.get('*', (req, res) => {
@@ -75,9 +79,7 @@ console.log(__dirname , '2');
 app.get("/", (req, res) => {
   res.send("hello to home");
 });
-app.use("/api/product", productRouter);
-app.use("/api/bestSelling", bestSellingsRouter);
-app.use("/api/productGategorys", productGategorysRouter);
+
 
 
   
