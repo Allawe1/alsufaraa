@@ -74,7 +74,7 @@ export function Product() {
                 title = {elem.img}
                   src={
                     elem.img !== ""
-                      ? `http://localhost:5000/images/${elem.img}`
+                      ? `https://alsufraa.herokuapp.com/images/${elem.img}`
                       : product1
                   }
                   className={ classes.media}
