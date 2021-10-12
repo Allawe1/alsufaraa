@@ -43,7 +43,7 @@ export function Products(props) {
   const [isError, setIsError] = useState(false);
   const fetchData = () => {
     axios
-      .get(`http://localhost:5000/productGategorys/products/${emp.state}`)
+      .get(`https://alsufraa.herokuapp.com/api/productGategorys/products/${emp.state}`)
       .then((response) => {
         setIsLoading(false);
         setNotes(response.data[0].product);
