@@ -7,7 +7,7 @@ export const useStyles = makeStyles((theme) => ({
     padding: "100px",
     position: "relative",
     [theme.breakpoints.only('xs')]: {
-      marginTop: 710,
+      marginTop: 715,
      },
   },
   smallDivider: {

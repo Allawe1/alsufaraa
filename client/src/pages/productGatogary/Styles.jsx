@@ -8,7 +8,7 @@ export const useStyles = makeStyles((theme) => ({
     position: "relative",
     textAlign: "center",
     [theme.breakpoints.only('xs')]: {
-      marginTop: 680,
+      marginTop: 715,
       padding : '90px 10px'
      },
   },
