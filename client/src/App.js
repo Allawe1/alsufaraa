@@ -32,9 +32,9 @@ import { getProductGategorys } from "./redux/actions/productGategory";
 // );
 
 const App = () => {
-
+  
   return (
-    <div className="landscope">
+    <div>
       <Router>
         <Header />
         <Switch>
