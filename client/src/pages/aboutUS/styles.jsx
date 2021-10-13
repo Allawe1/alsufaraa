@@ -10,6 +10,7 @@ export const useStyles = makeStyles((theme) => ({
       marginTop: 680,
       padding: "50px",
      },
+     
   },
   smallDivider: {
     height: "3px",
