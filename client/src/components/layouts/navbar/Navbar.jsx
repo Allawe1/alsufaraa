@@ -17,7 +17,7 @@ const Navbarr = () => {
         expand="md"
         variant="dark"
       >
-        <Container>
+        <Container {marginTop :-15}>
         <Navbar.Brand  className="d-lg-none d-md-none" href="/">ALSUFRAA </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={hidden} />
           <Navbar.Collapse id="responsive-navbar-nav" >
