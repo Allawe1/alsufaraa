@@ -22,7 +22,7 @@ export const useStyles = makeStyles((theme) => ({
      },
      [theme.breakpoints.only('xs')]: {
       padding : '80px 10px',
-      marginTop : 135
+      marginTop : 145
      },
   },
   Home2: {
