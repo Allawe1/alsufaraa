@@ -34,7 +34,7 @@ import { getProductGategorys } from "./redux/actions/productGategory";
 const App = () => {
 
   return (
-    <div className = "containerr">
+    <div>
       <Router>
         <Header />
         <Switch>
