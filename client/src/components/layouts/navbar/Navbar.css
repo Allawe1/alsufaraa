@@ -162,7 +162,7 @@
 @media (min-width: 414px) and (orientation: landscape) {
   .bg-img {
     background-image: url("../../../images/navtest.png");
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-position: center 0;
