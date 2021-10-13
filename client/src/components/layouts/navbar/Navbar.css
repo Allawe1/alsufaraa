@@ -159,7 +159,7 @@
     height: 180%;
   }
 }
-@media (min-width:413px) and (max-width:415px) {
+@media (min-width:895px) and (max-width:897px) {
   .bg-img {
     background-image: url("../../../images/logo.jpg");
     position: absolute;
