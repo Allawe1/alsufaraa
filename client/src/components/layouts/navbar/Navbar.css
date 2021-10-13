@@ -159,7 +159,7 @@
     height: 180%;
   }
 }
-@media (min-width: 414px) and (orientation: landscape) {
+/* @media (min-width: 414px) and (orientation: landscape) {
   .bg-img {
     background-image: url("../../../images/logo.jpg");
     position: absolute;
@@ -171,5 +171,5 @@
     width: 110%;
     height: 180%;
   }
-}
+} */
 
