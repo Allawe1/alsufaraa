@@ -32,9 +32,9 @@ import { getProductGategorys } from "./redux/actions/productGategory";
 // );
 
 const App = () => {
-  screen.lockOrientation("orientation");
+
   return (
-    <div>
+    <div className = "containerr">
       <Router>
         <Header />
         <Switch>
