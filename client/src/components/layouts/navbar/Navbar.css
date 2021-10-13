@@ -159,9 +159,9 @@
     height: 180%;
   }
 }
-@media (min-width:827px) and (max-width:829px) {
+@media (min-width:895px) and (max-width:897px) {
   .bg-img {
-    background-image: url("../../../images/navtest.png");
+    background-image: url("../../../images/logo.jpg");
     position: absolute;
     top: 0;
     left: 0;
