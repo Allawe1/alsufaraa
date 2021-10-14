@@ -9,10 +9,12 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('xs')]: {
       marginTop: 715,
      },
-     [`${theme.breakpoints.only('xs')} and (orientation: landscape)`]: {
+     [`${theme.breakpoints.only('sm')} and (orientation: landscape)`]: {
       marginTop: 0,
       padding: "50px ",
+      
      },
+     
   },
   smallDivider: {
     height: "3px",
