@@ -40,7 +40,7 @@ const __dirname = path.resolve();
 
 
 
-const run = async () => {
+
   const connection = await  Mongoose.connect(Db_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -58,13 +58,16 @@ const run = async () => {
   })
   const router = AdminBroExpress.buildRouter (adminBro)
 
+  
+  
+
+
+
+
+
+
+
   app.use(adminBro.options.rootPath, router)
-  
-}
-run()
-
-
-  
 app.use("/api/product", productRouter);
 app.use("/api/bestSelling", bestSellingsRouter);
 app.use("/api/productGategorys", productGategorysRouter);
