@@ -10,7 +10,7 @@ export const useStyles = makeStyles((theme) => ({
       marginTop: 715,
       padding: "10px",
     },
-    [`${theme.breakpoints.up('xs')} and (orientation: landscape)`]: {
+    [`${theme.breakpoints.only('xs')} and (orientation: landscape)`]: {
       marginTop: 0,
       padding: "50px ",
      },

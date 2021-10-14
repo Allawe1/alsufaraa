@@ -10,7 +10,7 @@ const Navbarr = () => {
   }
 
   return (
-    <div style = {{backgroundColor: "#edca82"}}>
+  
     <div className="bg-img">
       <Navbar
         collapseOnSelect
@@ -62,7 +62,7 @@ const Navbarr = () => {
         <span>FOR THE LOVE OF Alsufara product</span>
       </h3>
     </div>
-    </div>
+    
   );
 };
 
