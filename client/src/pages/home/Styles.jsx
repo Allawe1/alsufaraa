@@ -5,6 +5,11 @@ export const useStyles = makeStyles((theme) => ({
     paddingTop : 550,
     textAlign : 'center',
     position: "relative",
+    [`${theme.breakpoints.up('xs')} and (orientation: landscape)`]: {
+      marginTop: -50,
+      padding: "50px ",
+      margin : '-50px -50px'
+     },
   },
   home: {
     justifyContent: 'center',
@@ -24,6 +29,7 @@ export const useStyles = makeStyles((theme) => ({
       padding : '80px 10px',
       marginTop : 165
      },
+     
   },
   Home2: {
     textAlign: "center",

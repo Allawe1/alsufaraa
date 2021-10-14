@@ -10,6 +10,7 @@ const Navbarr = () => {
   }
 
   return (
+    <div style = {{backgroundColor: "#edca82"}}>
     <div className="bg-img">
       <Navbar
         collapseOnSelect
@@ -17,7 +18,7 @@ const Navbarr = () => {
         expand="md"
         variant="dark"
       >
-        <Container style={{marginTop :-15}}>
+        <Container style={{marginTop :-15}} >
         <Navbar.Brand  className="d-lg-none d-md-none" href="/">ALSUFRAA </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={hidden} />
           <Navbar.Collapse id="responsive-navbar-nav" >
@@ -60,6 +61,7 @@ const Navbarr = () => {
       <h3 id='h3Hidden'>
         <span>FOR THE LOVE OF Alsufara product</span>
       </h3>
+    </div>
     </div>
   );
 };

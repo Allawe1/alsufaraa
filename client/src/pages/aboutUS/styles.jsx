@@ -1,6 +1,8 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
+
+  
   main: {
     marginTop: 550,
     background: "#edca82",
@@ -9,6 +11,10 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('xs')]: {
       marginTop: 715,
       padding: "50px",
+     },
+     [`${theme.breakpoints.up('xs')} and (orientation: landscape)`]: {
+      marginTop: 0,
+      padding: "50px ",
      },
      
   },
