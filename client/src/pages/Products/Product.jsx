@@ -59,6 +59,7 @@ export function Products(props) {
     fetchData();
     
   }, []);
+  console.log(emp.state );
   if (isLoading) {
     return <div>Loading...</div>;
   }
