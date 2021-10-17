@@ -55,6 +55,7 @@ export function ContactUs() {
   }, []);
   return (
     <div className={classes.main}>
+      <div>
       <Grid container spacing={10} justifyContent="center" alignItems="center">
         <Grid>
           <div>
@@ -192,6 +193,7 @@ export function ContactUs() {
           </Container>
         </Grid>
       </Grid>
+      </div>
     </div>
   );
 }

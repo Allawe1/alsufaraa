@@ -185,7 +185,7 @@ export function Products(props) {
                   height={500}
                   src={
                     product.img !== ""
-                      ? `http://localhost:5000/images/${emp.state}/${product.img}`
+                      ? `https://alsufraa.herokuapp.com/images/${emp.state}/${product.img}`
                       : product1
                   }
                   alt="product"

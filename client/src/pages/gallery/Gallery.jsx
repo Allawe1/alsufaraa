@@ -19,6 +19,7 @@ function Gallery() {
   const classes = useStyles();
   return (
     <div className={classes.main}>
+      <div>
       <Typography className={classes.mainHeader}>Welcome to Gallery</Typography>
       <Divider variant="inset" className={classes.smallDivider} />
       <div className="container mx-auto px-auto ">
@@ -35,6 +36,7 @@ function Gallery() {
             </div>
           ))}
         </div>
+      </div>
       </div>
     </div>
   );

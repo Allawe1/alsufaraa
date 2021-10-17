@@ -50,7 +50,7 @@ export function ProductDetails(props) {
           <img
             src={
               state.img !== ""
-                ? `http://localhost:5000/images/${selectedGatogary}/${state.img}`
+                ? `http://alsufraa.herokuapp.com/images/${selectedGatogary}/${state.img}`
                 : product1
             }
             alt="product"

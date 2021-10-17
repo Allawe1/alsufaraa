@@ -8,6 +8,7 @@ function AboutUS() {
   }, [])
   return (
     <div className={classes.main}>
+      <div className={classes.home}>
       <Typography className={classes.mainHeader}>
         About Alsufra Bakery{" "}
       </Typography>
@@ -42,6 +43,7 @@ function AboutUS() {
           </Container>
         </Grid>
       </Grid>
+      </div>
     </div>
   );
 }
