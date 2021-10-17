@@ -10,31 +10,9 @@ export const useStyles = makeStyles((theme) => ({
       marginTop: 715,
      },
      [`${theme.breakpoints.only('sm')} and (orientation: landscape)`]: {
-      marginTop: 400,
-      
-     },
-     
-     
-  },
-  home: {
-    justifyContent: 'center',
-    backgroundColor: "#edca82",
-    [theme.breakpoints.only('lg')]: {
-      padding : '120px',
-    
-     },
-     [theme.breakpoints.only('md')]: {
-      padding : '100px 20px',
-      
-     },
-     [`${theme.breakpoints.only('sm')} and (orientation: landscape)`]: {
-      marginTop: -50,
+      marginTop: 0,
       padding: "50px ",
-      margin : '-50px -50px',
-     },
-     [theme.breakpoints.only('xs')]: {
-      padding : '80px 10px',
-      marginTop : 165
+      
      },
      
   },

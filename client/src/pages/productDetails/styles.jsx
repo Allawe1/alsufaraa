@@ -16,7 +16,8 @@ export const useStyles = makeStyles((theme) => ({
       padding : '30px 5px'
      },
      [`${theme.breakpoints.only('sm')} and (orientation: landscape)`]: {
-      marginTop: 400,
+      marginTop: 0,
+      padding: "50px ",
       
      },
   },
