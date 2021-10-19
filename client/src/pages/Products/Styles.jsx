@@ -104,7 +104,7 @@ export const useStyles = makeStyles((theme) => ({
     boxShadow: theme.shadows[5],
     padding: theme.spacing(0 ),
     backgroundColor: "#edca82",
-    // direction:'rtl',
+    direction:'rtl',
   },
   productHeader: {
     fontSize: "36px",
@@ -112,7 +112,8 @@ export const useStyles = makeStyles((theme) => ({
     color: "#30271c",
     fontFamily: "Signika",
     margin: "10px auto 20px",
-    
+    marginLeft : 300,
+    whiteSpace:'nowrap',
   },
   productSmallDivider: {
     height: "3px",
@@ -122,29 +123,38 @@ export const useStyles = makeStyles((theme) => ({
     display: "block",
     position: "relative",
     margin: "10px auto 20px",
-    right : 80
+    right : -135
   
+  },
+  productImage: {
+    padding: theme.spacing(1),
+    marginRight : -150,
+    display: "display",
+    maxWidth: "100%",
+    maxHeight: "100%",
   },
   ProductTitle: {
     fontSize: "30px",
     fontWeight: "600",
     color: "#30271c",
-    fontFamily: "Signika",
+    fontFamily: 'Mirza',
+    marginLeft : 300
   },
   ProductInfo: {
     fontSize: "24px",
     fontWeight: "400",
     color: "#30271c",
-    fontFamily: "Signika",
+    fontFamily: 'Mirza',
+    marginLeft : 300
   },
   productBigDivider: {
     height: "3px",
     marginTop: "25px",
     backgroundColor: "#097770",
-    width: "170px",
+    width: "120px",
     display: "block",
     position: "relative",
     margin: "10px auto 20px",
-    right : 40
+    right : -100
   },
 }));

@@ -49,7 +49,7 @@ export function ProductDetails(props) {
         <Grid item xs="auto">
           <img
             src={
-              state.img !== ""
+              state.img != ""
                 ? `http://alsufraa.herokuapp.com/images/${selectedGatogary}/${state.img}`
                 : product1
             }

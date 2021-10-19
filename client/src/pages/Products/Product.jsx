@@ -27,6 +27,7 @@ export function Products(props) {
       state: "Arabic",
     };
   }
+  const isDesktopOrLaptop = useMediaQuery({ query: '(min-device-width: 1224px)' })
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
   const [open, setOpen] = React.useState(false);
   const [product, setProduct] = useState({
@@ -100,7 +101,7 @@ export function Products(props) {
   const handleClose = () => {
     setOpen(false);
   };
-  // const isDesktopOrLaptop = useMediaQuery({ query: '(min-device-width: 1224px)' })
+  
  
   function sendProduct(elem) {
     if (isTabletOrMobile) {
@@ -172,7 +173,7 @@ export function Products(props) {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            <Grid container justifyContent="center" direction="row" spacing={4}>
+            <Grid container justifyContent="center" direction="row" spacing={0}>
               <Grid xs={6} item>
                 <img
                   width={400}
@@ -184,7 +185,7 @@ export function Products(props) {
                   }
                   alt="product"
                   title={product.img}
-                  className={classes.image}
+                  className={classes.productImage}
                 />
               </Grid>
               <Grid xs={6} item>
@@ -194,23 +195,17 @@ export function Products(props) {
                   </Typography>
                   <Divider
                     variant="inset"
-                    className={classes.productSmallDivider}
-                  />
-                  <Typography className={classes.ProductTitle}>
-                    description
-                  </Typography>
-                  <Typography className={classes.ProductInfo}>
-                    {product.description}
-                  </Typography>
-                  <Divider
-                    variant="inset"
                     className={classes.productBigDivider}
                   />
                   <Typography className={classes.ProductTitle}>
-                    ingeridaints
+                    المكونات
                   </Typography>
+                  <Divider
+                    variant="inset"
+                    className={classes.productSmallDivider}
+                  />
                   <Typography className={classes.ProductInfo}>
-                    {product.ingredients}
+                  {product.ingredients}
                   </Typography>
                 </Container>
               </Grid>
