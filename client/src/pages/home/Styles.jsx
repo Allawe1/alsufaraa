@@ -7,7 +7,9 @@ export const useStyles = makeStyles((theme) => ({
     position: "relative",
     [`${theme.breakpoints.only('sm')} and (orientation: landscape)`]: {
       marginTop: -50,
- 
+      padding: "50px ",
+      margin : '-50px -50px'
+      
      },
   
   },
@@ -22,11 +24,8 @@ export const useStyles = makeStyles((theme) => ({
       padding : '100px 20px',
       
      },
-     [`${theme.breakpoints.only('sm')} and (orientation: landscape)`]: {
-      marginTop: -50,
-      padding: "50px ",
-      margin : '-50px -50px',
-      backgroundColor : 'red'
+     [theme.breakpoints.only('sm')]: {
+      padding : '100px 50px',
      },
      [theme.breakpoints.only('xs')]: {
       padding : '80px 10px',
