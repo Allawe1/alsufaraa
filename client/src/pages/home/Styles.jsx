@@ -5,7 +5,10 @@ export const useStyles = makeStyles((theme) => ({
     paddingTop : 550,
     textAlign : 'center',
     position: "relative",
-  
+    [`${theme.breakpoints.only('sm')} and (orientation: landscape)`]: {
+      marginTop: -50,
+ 
+     },
   
   },
   home: {
