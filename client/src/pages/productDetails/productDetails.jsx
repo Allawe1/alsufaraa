@@ -14,7 +14,7 @@ export function ProductDetails(props) {
     'Arabic',
     'Tanoor',
     'Kaak',
-    'pastry',
+    'Pastry',
     'Bun',
     'Others',
     'Toast'
