@@ -43,7 +43,8 @@ function Home() {
                   <img
                     src="http://patisseriemaxime.co.uk/wp-content/uploads/2015/05/visit-our-patissierie.png"
                     className={classes.image}
-                    alt=""
+                    alt="home"
+                    title = 'home'
                   />
                   <div className={classes.overlay}>Product</div>
                 </Link>
@@ -55,7 +56,8 @@ function Home() {
                   <img
                     src="http://patisseriemaxime.co.uk/wp-content/uploads/2015/05/visit-our-patissierie.png"
                     className={classes.image}
-                    alt=""
+                    alt="home"
+                    title = 'home'
                   />
                   <div className={classes.overlay}>Gallery</div>
                 </Link>
@@ -68,7 +70,8 @@ function Home() {
                     <img
                       src="http://patisseriemaxime.co.uk/wp-content/uploads/2017/12/DSC07828-Edit-570x570.jpg"
                       className={classes.image}
-                      alt=""
+                      alt="home"
+                      title = 'home'
                     />
                     <div className={classes.overlaySmall}>About us</div>
                   </Link>
@@ -80,7 +83,8 @@ function Home() {
                     <img
                       src="http://patisseriemaxime.co.uk/wp-content/uploads/2015/05/about-us.png"
                       className={classes.image}
-                      alt=""
+                      alt="home"
+                      title = 'home'
                     />
                     <div className={classes.overlaySmall}>Contact Us</div>
                   </Link>
@@ -106,7 +110,7 @@ function Home() {
           alignItems="center"
         >
           {bestSelling.map((elem) => (
-            <Grid item xs="auto">
+            <Grid item xs="auto" key={elem._id}>
               <ProductCard img={elem.img} name={elem.name}></ProductCard>
             </Grid>
           ))}

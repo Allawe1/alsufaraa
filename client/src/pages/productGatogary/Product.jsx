@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductGategorys } from "../../redux/actions/productGategory";
 import product1 from '../../images/product1.jpg'
-import axios from "axios";
-import { useState } from "react";
 export function Product() {
   const classes = useStyles();
   const dispatch = useDispatch();
@@ -14,17 +12,14 @@ export function Product() {
     localStorage.clear()
     dispatch(getProductGategorys());
   }, [dispatch]);
-  console.log( localStorage.getItem('state'));
+ 
   var productGategorys = useSelector((state) => state.productGategorys);
-  console.log(productGategorys);
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  function replace (img){
-    const path = img.substring(0, img.indexOf('.'));
-    return path
-  }
+
   // const [notes, setNotes] = useState([]);
   // const [isLoading, setIsLoading] = useState(false);
   // const [isError, setIsError] = useState(false);

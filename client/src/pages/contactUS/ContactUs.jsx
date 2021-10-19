@@ -4,7 +4,6 @@ import {
   Container,
   Divider,
   Grid,
-  Icon,
   TextField,
   Typography,
 } from "@material-ui/core";

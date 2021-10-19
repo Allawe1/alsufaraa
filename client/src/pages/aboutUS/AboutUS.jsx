@@ -25,6 +25,7 @@ function AboutUS() {
             className={classes.image}
             src="http://patisseriemaxime.co.uk/wp-content/uploads/2015/05/about-us.png"
             alt='aboutUs'
+            title = 'aboutUs'
           />
         </Grid>
         <Grid item xs='auto' lg={6}  container   >

@@ -41,17 +41,18 @@ export function ProductCard(props) {
   const classes = useStyles();
 
   return (
-    <div>
+    <div key = {props._id}>
       <Card className={classes.card}>
         <CardActionArea>
           <CardMedia
             className={classes.media}
             image={
-              props.img != ""
+              props.img !== ""
                 ? `https://alsufraa.herokuapp.com/images/${props.img}`
                 : product1
             }
             title={props.img}
+            alt = {props.img}
           />
         </CardActionArea>
       </Card>

@@ -7,14 +7,9 @@ import ContactUs from "./pages/contactUS/";
 import Products from "./pages/Products";
 import AboutUS from "./pages/aboutUS/AboutUS";
 import Gallerys from "./pages/gallery";
-import NotFoundPage from "./pages/pageNotFound/";
 import ProductDetails from "./pages/productDetails/";
 import { Footer, Header } from "./components/layouts";
-import { useDispatch, useSelector } from "react-redux";
-import { getBestSelling } from "./redux/actions/bestSelling";
-import { useEffect } from "react";
-import {getProduct} from './redux/actions/product'
-import { getProductGategorys } from "./redux/actions/productGategory";
+
 
 
 // const NavRoute = ({ exact, path, component: Component }) => (

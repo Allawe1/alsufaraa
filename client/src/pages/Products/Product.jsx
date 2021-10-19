@@ -11,10 +11,7 @@ import {
 import Backdrop from "@material-ui/core/Backdrop";
 import React, { useEffect, useState } from "react";
 import { useStyles } from "./Styles";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
 import product1 from "../../images/product1.jpg";
-import { getProductGategorysProduct } from "../../redux/actions/productGategory";
 import { useLocation } from "react-router";
 import { useMediaQuery } from "react-responsive";
 import axios from "axios";
@@ -40,7 +37,6 @@ export function Products(props) {
   });
   const [notes, setNotes] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
   const fetchData = () => {
     axios
       .get(`https://alsufraa.herokuapp.com/api/productGategorys/products/${emp.state}`)
@@ -50,21 +46,19 @@ export function Products(props) {
       })
       .catch((error) => {
         setIsLoading(false);
-        setIsError(true);
         console.log(error);
       });
   };
   useEffect(() => {
     window.scrollTo(0, 0);
-    fetchData();
-    
+    fetchData()
   }, []);
-  console.log(emp.state );
+
   if (isLoading) {
     return <div>Loading...</div>;
   }
 
- console.log(notes);
+
   // const dispatch = useDispatch();
   // console.log(emp.state);
   // useEffect(() => {

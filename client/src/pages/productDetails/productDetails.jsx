@@ -17,15 +17,15 @@ export function ProductDetails(props) {
   ]
   var selectedGatogary;
   
-  if(state.productGategory=="6144e629e151f5246478a862"){
+  if(state.productGategory==="6144e629e151f5246478a862"){
   selectedGatogary = productGategoryName[0]
-  }else if(state.productGategory=="6144b6996840c728943b15d4")
+  }else if(state.productGategory==="6144b6996840c728943b15d4")
   {
     selectedGatogary = productGategoryName[2]
-  }else if(state.productGategory=="6144b6ac6840c728943b15d8")
+  }else if(state.productGategory==="6144b6ac6840c728943b15d8")
   {
     selectedGatogary = productGategoryName[3]
-  }else if(state.productGategory=="6144b6a36840c728943b15d6")
+  }else if(state.productGategory==="6144b6a36840c728943b15d6")
   {
     selectedGatogary = productGategoryName[1]
   }
