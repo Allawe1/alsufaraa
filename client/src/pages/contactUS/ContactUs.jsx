@@ -44,6 +44,7 @@ export function ContactUs() {
         console.log(err);
       });
     resetForm();
+    window.scrollTo(0, 0);
   }
   function resetForm() {
     document.getElementById("name").value = "";
