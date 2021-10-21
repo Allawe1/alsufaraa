@@ -38,10 +38,18 @@ const connection = await Mongoose.connect(process.env.MONGO_URL, {
   useUnifiedTopology: true,
   useFindAndModify: false,
 });
+
+const User = Mongoose.model('User', {
+  email: { type: String, required: true },
+  password: { type: String, required: true },
+  role: { type: String, enum: ['admin', 'restricted'], required: true },
+})
+
+
 const adminBro = new AdminBro({
   Database: [connection],
   rootPath: "/admin",
-  resources: [products, productGategorys, bestSellings],
+  resources: [products, productGategorys, bestSellings , User],
 });
 const router = AdminBroExpress.buildRouter(adminBro);
 
