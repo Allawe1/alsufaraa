@@ -112,13 +112,13 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "30px",
     fontWeight: "600",
     color: "#30271c",
-    fontFamily: "Signika",
+    fontFamily: 'Mirza',
   },
   ProductInfo: {
     fontSize: "24px",
     fontWeight: "400",
     color: "#30271c",
-    fontFamily: "Signika",
+    fontFamily: 'Mirza',
   },
  
  

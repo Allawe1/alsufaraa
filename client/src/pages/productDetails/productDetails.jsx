@@ -6,7 +6,6 @@ import { useMediaQuery } from 'react-responsive'
 export function ProductDetails(props) {
   const classes = useStyles();
   var state = props.location.state;
-  console.log(state);
   if(!state){
       state={}
   }
@@ -44,7 +43,6 @@ export function ProductDetails(props) {
   {
     selectedGatogary = productGategoryName[6]
   }
-  console.log(selectedGatogary);
 
   // const isDesktopOrLaptop = useMediaQuery({ query: '(min-device-width: 1224px)' })
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
@@ -76,17 +74,15 @@ export function ProductDetails(props) {
 
           <Typography className={classes.productHeader}>{state.name}</Typography>
           <Divider variant="inset" className={classes.bigDivider} />
+                 
+                  
                   <Typography className={classes.ProductTitle}>
-                    Description
+                    مكونات
                   </Typography>
-                  <Typography className={classes.ProductInfo}>{state.description}</Typography>
                   <Divider
                     variant="inset"
                     className={classes.productSmallDivider}
                   />
-                  <Typography className={classes.ProductTitle}>
-                    Ingeridaints
-                  </Typography>
                   <Typography className={classes.ProductInfo}>{state.ingredients}</Typography>
         </Grid>
       </Grid>

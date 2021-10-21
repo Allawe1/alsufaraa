@@ -72,7 +72,7 @@ export function ContactUs() {
                   label="Name"
                   style={{ margin: 8, bottom: 20, top: 20 }}
                   placeholder="Enter your name"
-                  margin="auto"
+                 
                   InputLabelProps={{
                     shrink: true,
                   }}

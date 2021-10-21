@@ -16,10 +16,10 @@ function Home() {
     localStorage.clear()
     dispatch(getBestSelling());
   }, [dispatch]);
-  console.log( localStorage.getItem('state'));
+ 
 
   var bestSelling = useSelector((state) => state.bestSelling);
-  console.log(bestSelling);
+
   // useEffect(() => {
   //   window.scrollTo(0, 0);
   // }, []);
