@@ -36,7 +36,7 @@ const PORT = process.env.PORT || 5000;
 
 const __dirname = path.resolve();
 
-const connection = await Mongoose.connect(MONGO_URL, {
+const connection = await Mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
