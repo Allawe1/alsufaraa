@@ -10,17 +10,18 @@ import bestSellingsRouter from "./routes/bestSelling.js";
 import productGategorysRouter from "./routes/productGategorys.js";
 import AdminBro from "admin-bro";
 import AdminBroExpress from "@admin-bro/express";
+import AdminBroExpressjs from "@admin-bro/express";
 import AdminBroMongoose from "@admin-bro/mongoose";
 import { addImage } from "./controllers/products.js";
 import uploadFeature from "@admin-bro/upload";
 import path from "path";
 import dotenv from 'dotenv'
+import bcrypt from 'bcrypt'
 dotenv.config()
 AdminBro.registerAdapter(AdminBroMongoose);
 const app = express();
 app.use("/images", express.static("./images"));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+
 app.use(
   cors({
     origin: true,
@@ -29,11 +30,13 @@ app.use(
   })
 );
 
+// const MONGO_URL = "mongodb+srv://ali:ali123@cluster0.qef8w.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+
 const PORT = process.env.PORT || 5000;
 
 const __dirname = path.resolve();
 
-const connection = await Mongoose.connect(process.env.MONGO_URL, {
+const connection = await Mongoose.connect(MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
@@ -41,7 +44,7 @@ const connection = await Mongoose.connect(process.env.MONGO_URL, {
 
 const User = Mongoose.model('User', {
   email: { type: String, required: true },
-  password: { type: String, required: true },
+  encryptedPassword: { type: String, required: true },
   role: { type: String, enum: ['admin', 'restricted'], required: true },
 })
 
@@ -49,11 +52,54 @@ const User = Mongoose.model('User', {
 const adminBro = new AdminBro({
   Database: [connection],
   rootPath: "/admin",
-  resources: [products, productGategorys, bestSellings , User],
+  resources: [ bestSellings , productGategorys , products , {
+    resource: User,
+    options: {
+      properties: {
+        encryptedPassword: {
+          isVisible: false,
+        },
+        password: {
+          type: 'string',
+          isVisible: {
+            list: false, edit: true, filter: false, show: false,
+          },
+        },
+      },
+      actions: {
+        new: {
+          before: async (request) => {
+            if(request.payload.password) {
+              request.payload = {
+                ...request.payload,
+                encryptedPassword: await bcrypt.hash(request.payload.password, 10),
+                password: undefined,
+              }
+            }
+            return request
+          },
+        }
+      }
+    }
+  }],
 });
-const router = AdminBroExpress.buildRouter(adminBro);
+const router = AdminBroExpressjs.buildAuthenticatedRouter(adminBro, {
+  authenticate: async (email, password) => {
+    const user = await User.findOne({ email })
+    if (user) {
+      const matched = await bcrypt.compare(password, user.encryptedPassword)
+      if (matched) {
+        return user
+      }
+    }
+    return false
+  },
+  cookiePassword: 'some-secret-password-used-to-secure-cookie',
+})
 
 app.use(adminBro.options.rootPath, router);
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use("/api/product", productRouter);
 app.use("/api/bestSelling", bestSellingsRouter);
 app.use("/api/productGategorys", productGategorysRouter);
