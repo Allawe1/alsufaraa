@@ -8,7 +8,8 @@ import { Link } from "react-router-dom";
 import { Card, Grid } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import { getBestSelling } from "../../redux/actions/bestSelling";
-
+import productList from '../../images/productList.jpg'
+import gallery from '../../images/gallery.jpg'
 function Home() {
   const classes = useStyles();
   const dispatch = useDispatch(); 
@@ -41,7 +42,7 @@ function Home() {
               <Card className={classes.cardBig}>
                 <Link to="/product">
                   <img
-                    src="http://patisseriemaxime.co.uk/wp-content/uploads/2015/05/visit-our-patissierie.png"
+                    src={productList}
                     className={classes.image}
                     alt="home"
                     title = 'home'

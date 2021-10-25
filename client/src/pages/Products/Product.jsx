@@ -173,10 +173,10 @@ export function Products(props) {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            <Grid container justifyContent="center" direction="row" spacing={0}>
+            <Grid container justifyContent="center" alignItems="flex-start" direction="row" spacing={0}>
               <Grid xs={6} item>
                 <img
-                  width={400}
+                  width={500}
                   height={500}
                   src={
                     product.img !== ""

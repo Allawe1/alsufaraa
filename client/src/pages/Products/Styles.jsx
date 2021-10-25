@@ -102,7 +102,7 @@ export const useStyles = makeStyles((theme) => ({
   paper: {
     border: "0px solid #000",
     boxShadow: theme.shadows[5],
-    padding: theme.spacing(0 ),
+    padding: theme.spacing(0),
     backgroundColor: "#edca82",
     direction:'rtl',
   },
@@ -112,7 +112,7 @@ export const useStyles = makeStyles((theme) => ({
     color: "#30271c",
     fontFamily: "Signika",
     margin: "10px auto 20px",
-    marginLeft : 300,
+    marginLeft : 350,
     whiteSpace:'nowrap',
   },
   productSmallDivider: {
@@ -123,7 +123,7 @@ export const useStyles = makeStyles((theme) => ({
     display: "block",
     position: "relative",
     margin: "10px auto 20px",
-    right : -135
+    right : -160
   
   },
   productImage: {
@@ -138,14 +138,16 @@ export const useStyles = makeStyles((theme) => ({
     fontWeight: "600",
     color: "#30271c",
     fontFamily: 'Mirza',
-    marginLeft : 300
+    marginLeft : 400
   },
   ProductInfo: {
     fontSize: "24px",
     fontWeight: "400",
     color: "#30271c",
     fontFamily: 'Mirza',
-    marginLeft : 300
+    marginLeft : 0,
+    wordBreak: 'break-all',
+    marginRight : -100
   },
   productBigDivider: {
     height: "3px",
@@ -155,6 +157,6 @@ export const useStyles = makeStyles((theme) => ({
     display: "block",
     position: "relative",
     margin: "10px auto 20px",
-    right : -100
+    right : -150
   },
 }));

@@ -9,11 +9,8 @@ import productRouter from "./routes/product.js";
 import bestSellingsRouter from "./routes/bestSelling.js";
 import productGategorysRouter from "./routes/productGategorys.js";
 import AdminBro from "admin-bro";
-import AdminBroExpress from "@admin-bro/express";
 import AdminBroExpressjs from "@admin-bro/express";
 import AdminBroMongoose from "@admin-bro/mongoose";
-import { addImage } from "./controllers/products.js";
-import uploadFeature from "@admin-bro/upload";
 import path from "path";
 import dotenv from 'dotenv'
 import bcrypt from 'bcrypt'
@@ -105,11 +102,11 @@ app.use("/api/bestSelling", bestSellingsRouter);
 app.use("/api/productGategorys", productGategorysRouter);
 
 app.use(express.static(path.join("client/build")));
-console.log(__dirname, "1");
+
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "/client/build/index.html"));
 });
-console.log(__dirname, "2");
+
 
 app.get("/api", (req, res) => {
   res.send("hello to home");
