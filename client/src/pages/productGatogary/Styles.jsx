@@ -65,7 +65,7 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   media: {
-    height: 280,
+    height: 300,
     width : 400// 16:9
   },
   image: {
