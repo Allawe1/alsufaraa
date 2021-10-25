@@ -105,6 +105,7 @@ export const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(0),
     backgroundColor: "#edca82",
     direction:'rtl',
+    width : 950
   },
   productHeader: {
     fontSize: "36px",
@@ -123,7 +124,7 @@ export const useStyles = makeStyles((theme) => ({
     display: "block",
     position: "relative",
     margin: "10px auto 20px",
-    right : -160
+    right : -170
   
   },
   productImage: {
@@ -145,9 +146,9 @@ export const useStyles = makeStyles((theme) => ({
     fontWeight: "400",
     color: "#30271c",
     fontFamily: 'Mirza',
-    marginLeft : 0,
-    wordBreak: 'break-all',
-    marginRight : -100
+    textAlign : 'start',
+    textOverflow: 'ellipsis',
+    marginRight : 0
   },
   productBigDivider: {
     height: "3px",
