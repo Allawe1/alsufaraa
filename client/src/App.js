@@ -7,6 +7,7 @@ import ContactUs from "./pages/contactUS/";
 import Products from "./pages/Products";
 import AboutUS from "./pages/aboutUS/AboutUS";
 import Gallerys from "./pages/gallery";
+import  NotFoundPage  from "./pages/pageNotFound/";
 import ProductDetails from "./pages/productDetails/";
 import { Footer, Header } from "./components/layouts";
 
@@ -40,7 +41,7 @@ const App = () => {
           <Route path="/products" exact component={Products} />
           <Route path="/gallery" exact component={Gallerys} />
           <Route path="/productDetails" exact component={ProductDetails} />
-          <Route path="*" component={Home} />
+          <Route path="*" component={NotFoundPage} />
         </Switch>
         <Footer />
       </Router>

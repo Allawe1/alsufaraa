@@ -6,7 +6,7 @@ export const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
   },
   main: {
-    marginTop: 550,
+    marginTop: 0,
     background: "#edca82",
     padding: "100px",
     position: "relative",
@@ -16,4 +16,10 @@ export const useStyles = makeStyles((theme) => ({
       padding : '30px 5px'
      },
   },
+  h3 : {
+    fontSize: "36px",
+    fontWeight: "400",
+    color: "#30271c",
+    fontFamily: "Signika",
+  }
 }));

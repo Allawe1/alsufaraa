@@ -6,11 +6,11 @@ export function NotFoundPage (){
     const classes = useStyles()
    
         
-        return <div className = {classes.main}>
-            {/* <img src={PageNotFound}  /> */}
-            <p style={{textAlign:"center"}}>
-              <Link to="/">Go to Home </Link>
-            </p>
-          </div>;
+        return  <div className={classes.main}>
+        <img src="https://i.imgur.com/qIufhof.png" />
+        <div id="info">
+            <h3 className= {classes.h3}>This page could not be found <br/> Go back to  <Link to='/'>home Page</Link> </h3>
+        </div>
+    </div >
     
 }
