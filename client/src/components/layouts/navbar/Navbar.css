@@ -68,7 +68,7 @@
 
   
 }
-@media (min-width:733px) and (max-width:735px) {
+/* @media (min-width:733px) and (max-width:735px) {
   .bg-img {
     background-image: url("../../../images/navtest.png");
     position: absolute;
@@ -80,8 +80,8 @@
     width: 100%;
     height: 190%;
   }
-}
-@media (min-width:412px) and (max-width:413px) {
+} */
+/* @media (min-width:412px) and (max-width:413px) {
   .bg-img {
     background-image: url("../../../images/navtest.png");
     position: absolute;
@@ -93,8 +93,8 @@
     width: 100%;
     height: 110%;
   }
-}
-@media (min-width:684px) and (max-width:685px) {
+} */
+@media (min-width:670px) and (max-width:700px) {
   .bg-img {
     background-image: url("../../../images/navtest.png");
     position: absolute;
@@ -107,7 +107,7 @@
     height: 190%;
   }
 }
-@media (min-width:375px) and (max-width:376px) {
+@media (min-width:350px) and (max-width:390px) {
   .bg-img {
     background-image: url("../../../images/navtest.png");
     position: absolute;
@@ -120,7 +120,7 @@
     height: 190%;
   }
 }
-@media (min-width:667px) and (max-width:668px) {
+@media (min-width:650px) and (max-width:690px) {
   .bg-img {
     background-image: url("../../../images/navtest.png");
     position: absolute;
@@ -133,7 +133,7 @@
     height: 195%;
   }
 }
-@media (min-width:414px) and (max-width:415px) {
+@media (min-width:400px) and (max-width:440px) {
   .bg-img {
     background-image: url("../../../images/navtest.png");
     position: absolute;
@@ -146,7 +146,7 @@
     height: 110%;
   }
 }
-@media (min-width:736px) and (max-width:737px) {
+@media (min-width:720px) and (max-width:750px) {
   .bg-img {
     background-image: url("../../../images/navtest.png");
     position: absolute;
