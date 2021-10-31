@@ -4,7 +4,6 @@ import Mongoose from "mongoose";
 import productGategorys from "./models/productGategorys.js";
 import products from "./models/products.js";
 import bestSellings from "./models/bestSellings.js";
-import bodyParser from "body-parser";
 import productRouter from "./routes/product.js";
 import bestSellingsRouter from "./routes/bestSelling.js";
 import productGategorysRouter from "./routes/productGategorys.js";
@@ -91,7 +90,7 @@ const router = AdminBroExpressjs.buildAuthenticatedRouter(adminBro, {
     }
     return false
   },
-  cookiePassword: 'some-secret-password-used-to-secure-cookie',
+  cookiePassword: process.env.PASSWORD_COOKIE,
 })
 
 app.use(adminBro.options.rootPath, router);
