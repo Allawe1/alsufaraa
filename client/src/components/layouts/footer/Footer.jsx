@@ -14,7 +14,7 @@ const Footer = () =>{
                 <Link style={{marginRight : '30px'}} className="list-inline-item" to='/Product'>Product</Link>
                 <Link style={{marginRight : '30px'}} className="list-inline-item" to='/gallery'>Gallery</Link>
                 <Link style={{marginRight : '30px'}} className="list-inline-item" to='/contactUS'>Contact US</Link>
-                <Link style={{marginRight : '30px'}} className="list-inline-item" to='/aboutUS'>About us</Link>
+                <Link style={{marginRight : '30px'}} className="list-inline-item" to='/aboutUS'>About US</Link>
             </ul>
             <p className="copyright">Company Name © 2018</p>
         
