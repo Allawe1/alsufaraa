@@ -26,7 +26,7 @@ app.use(
   })
 );
 
-// const MONGO_URL = "mongodb+srv://ali:ali123@cluster0.qef8w.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+
 
 const PORT = process.env.PORT || 5000;
 
@@ -100,10 +100,10 @@ app.use("/api/product", productRouter);
 app.use("/api/bestSelling", bestSellingsRouter);
 app.use("/api/productGategorys", productGategorysRouter);
 
-app.use(express.static(path.join("client/build")));
+app.use(express.static(path.join("client/public")));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname + "/client/build/index.html"));
+  res.sendFile(path.join(__dirname + "/client/public/index.html"));
 });
 
 
