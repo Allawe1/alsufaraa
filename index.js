@@ -99,10 +99,10 @@ app.use("/api/product", productRouter);
 app.use("/api/bestSelling", bestSellingsRouter);
 app.use("/api/productGategorys", productGategorysRouter);
 
-app.use(express.static(path.join("client/build")));
+app.use(express.static(path.join("client/public")));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname + "/client/build/index.html"));
+  res.sendFile(path.join(__dirname + "/client/public/index.html"));
 });
 
 
