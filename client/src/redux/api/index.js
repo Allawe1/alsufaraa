@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const url = "https://alsufaraa-3oror.ondigitalocean.app/api/"
+const url = "http://localhost:5000/api/"
 
 
 

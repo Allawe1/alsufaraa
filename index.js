@@ -100,14 +100,14 @@ app.use("/api/product", productRouter);
 app.use("/api/bestSelling", bestSellingsRouter);
 app.use("/api/productGategorys", productGategorysRouter);
 
-app.use(express.static(path.join("client/build")));
+// app.use(express.static(path.join("client/build")));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname + "/client/build/index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname + "/client/build/index.html"));
+// });
 
 
-app.get("/test", (req, res) => {
+app.get("/", (req, res) => {
   res.send("hello to home");
 });
 
