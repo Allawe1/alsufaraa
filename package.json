@@ -5,8 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "start": "concurrently \"node index.js\" \"npm run client\"",
+    "heroku-postbuild": "concurrently \"node index.js\" \"npm run client\"",
+    "client" : "cd client && npm start"
   },
   "keywords": [],
   "author": "",
