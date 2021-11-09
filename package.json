@@ -7,7 +7,7 @@
   "scripts": {
     "start": "concurrently \"node index.js\" \"npm run client\"",
     "heroku-postbuild": "concurrently \"node index.js\" \"npm run client\"",
-    "client" : "cd client && npm start"
+    "client" : "npm install && cd client && npm start"
   },
   "keywords": [],
   "author": "",
