@@ -90,8 +90,8 @@ const router = AdminBroExpressjs.buildAuthenticatedRouter(adminBro, {
   },
   cookiePassword: process.env.PASSWORD_COOKIE,
 })
-
-app.use("/alsufaraa" + adminBro.options.rootPath, router);
+console.log(`/alsufaraa${adminBro.options.rootPath}`);
+app.use(`/alsufaraa${adminBro.options.rootPath}`, router);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use("/api/product", productRouter);
