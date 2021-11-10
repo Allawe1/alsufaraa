@@ -26,8 +26,6 @@ app.use(
   })
 );
 
-// const MONGO_URL = "mongodb+srv://ali:ali123@cluster0.qef8w.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-
 const PORT = process.env.PORT || 5000;
 
 const __dirname = path.resolve();
