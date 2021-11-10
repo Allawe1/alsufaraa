@@ -63,7 +63,7 @@ export function ProductDetails(props) {
           <img
             src={
               state.img != ""
-                ? `http://alsufraa.herokuapp.com/images/${selectedGatogary}/${state.img}`
+                ? `https://alsufaraa-client-zmcto.ondigitalocean.app/alsufaraa/images/${selectedGatogary}/${state.img}`
                 : product1
             }
             alt="product"

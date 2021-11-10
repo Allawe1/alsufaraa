@@ -26,7 +26,7 @@ app.use(
   })
 );
 
-// const MONGO_URL = "mongodb+srv://ali:ali123@cluster0.qef8w.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+
 
 const PORT = process.env.PORT || 5000;
 
@@ -93,7 +93,7 @@ const router = AdminBroExpressjs.buildAuthenticatedRouter(adminBro, {
   cookiePassword: process.env.PASSWORD_COOKIE,
 })
 
-app.use(adminBro.options.rootPath, router);
+app.use("/alsufaraa" + adminBro.options.rootPath, router);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use("/api/product", productRouter);

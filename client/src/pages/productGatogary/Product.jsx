@@ -69,7 +69,7 @@ export function Product() {
                 title = {elem.img}
                   src={
                     elem.img !== ""
-                      ? `https://alsufraa.herokuapp.com/images/${elem.img}`
+                      ? `https://alsufaraa-client-zmcto.ondigitalocean.app/alsufaraa/images/${elem.img}`
                       : product1
                   }
                   className={ classes.media}

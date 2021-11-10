@@ -48,7 +48,7 @@ export function ProductCard(props) {
             className={classes.media}
             image={
               props.img !== ""
-                ? `https://alsufaraa-3oror.ondigitalocean.app/images/${props.img}`
+                ? `https://alsufaraa-client-zmcto.ondigitalocean.app/alsufaraa/images/${props.img}`
                 : product1
             }
             title={props.img}

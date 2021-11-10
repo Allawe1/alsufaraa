@@ -9,7 +9,9 @@ import { Card, Grid } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import { getBestSelling } from "../../redux/actions/bestSelling";
 import productList from '../../images/productList.jpg'
-import gallery from '../../images/gallery.jpg'
+import gallery from '../../images/gallery.png'
+import about from '../../images/about.jpg'
+import contact from '../../images/contact.png'
 function Home() {
   const classes = useStyles();
   const dispatch = useDispatch(); 
@@ -44,8 +46,8 @@ function Home() {
                   <img
                     src={productList}
                     className={classes.image}
-                    alt="home"
-                    title = 'home'
+                    alt="Home"
+                    title = 'Home'
                   />
                   <div className={classes.overlay}>Product</div>
                 </Link>
@@ -55,10 +57,10 @@ function Home() {
               <Card className={classes.cardMd}>
                 <Link to="/gallery">
                   <img
-                    src="http://patisseriemaxime.co.uk/wp-content/uploads/2015/05/visit-our-patissierie.png"
+                    src={gallery}
                     className={classes.image}
-                    alt="home"
-                    title = 'home'
+                    alt="Gallery"
+                    title = 'Gallery'
                   />
                   <div className={classes.overlay}>Gallery</div>
                 </Link>
@@ -69,10 +71,10 @@ function Home() {
                 <Card className={classes.card}>
                   <Link to="/aboutUs">
                     <img
-                      src="http://patisseriemaxime.co.uk/wp-content/uploads/2017/12/DSC07828-Edit-570x570.jpg"
+                      src={about}
                       className={classes.image}
-                      alt="home"
-                      title = 'home'
+                      alt="About US"
+                      title = 'About US'
                     />
                     <div className={classes.overlaySmall}>About us</div>
                   </Link>
@@ -82,10 +84,10 @@ function Home() {
                 <Card className={classes.card}>
                   <Link to="/contactUs">
                     <img
-                      src="http://patisseriemaxime.co.uk/wp-content/uploads/2015/05/about-us.png"
+                      src={contact}
                       className={classes.image}
-                      alt="home"
-                      title = 'home'
+                      alt="Contact US"
+                      title = 'Contact US'
                     />
                     <div className={classes.overlaySmall}>Contact Us</div>
                   </Link>

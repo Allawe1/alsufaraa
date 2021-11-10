@@ -40,7 +40,7 @@ export function Products(props) {
   const [isLoading, setIsLoading] = useState(false);
   const fetchData = () => {
     axios
-      .get(`https://alsufraa.herokuapp.com/api/productGategorys/products/${emp.state}`)
+      .get(`https://alsufaraa-client-zmcto.ondigitalocean.app/alsufaraa/api/productGategorys/products/${emp.state}`)
       .then((response) => {
         setIsLoading(false);
         setNotes(response.data[0].product);
@@ -143,7 +143,7 @@ export function Products(props) {
                   <img
                     src={
                       elem.img !== ""
-                        ? `https://alsufraa.herokuapp.com/images/${emp.state}/${elem.img}`
+                        ? `https://alsufaraa-client-zmcto.ondigitalocean.app/alsufaraa/images/${emp.state}/${elem.img}`
                         : product1
                     }
                     alt="product"
@@ -180,7 +180,7 @@ export function Products(props) {
                   height={500}
                   src={
                     product.img !== ""
-                      ? `https://alsufraa.herokuapp.com/images/${emp.state}/${product.img}`
+                      ? `https://alsufaraa-client-zmcto.ondigitalocean.app/alsufaraa/images/${emp.state}/${product.img}`
                       : product1
                   }
                   alt="product"
