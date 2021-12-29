@@ -117,6 +117,7 @@ app.use("/api/productGategorys", productGategorysRouter);
 
 app.get("/", (req, res) => {
   res.send("hello to home");
+  console.log("hello");
 });
 
 app.listen(PORT, () =>
