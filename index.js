@@ -4,8 +4,12 @@ import Mongoose from "mongoose";
 import productGategorys from "./models/productGategorys.js";
 import products from "./models/products.js";
 import bestSellings from "./models/bestSellings.js";
+import orders from "./models/orders.js";
+import users from "./models/users.js";
 import productRouter from "./routes/product.js";
 import bestSellingsRouter from "./routes/bestSelling.js";
+import userRouter from "./routes/user.js";
+import orderRouter from "./routes/order.js";
 import productGategorysRouter from "./routes/productGategorys.js";
 import AdminBro from "admin-bro";
 import AdminBroExpressjs from "@admin-bro/express";
@@ -36,7 +40,7 @@ const connection = await Mongoose.connect(process.env.MONGO_URL, {
   useFindAndModify: false,
 });
 
-const User = Mongoose.model("User", {
+const User = Mongoose.model("adminUser", {
   email: { type: String, required: true },
   encryptedPassword: { type: String, required: true },
   role: { type: String, enum: ["admin", "restricted"], required: true },
@@ -49,6 +53,8 @@ const adminBro = new AdminBro({
     bestSellings,
     productGategorys,
     products,
+    orders,
+    users,
     {
       resource: User,
 
@@ -108,6 +114,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/api/product", productRouter);
 app.use("/api/bestSelling", bestSellingsRouter);
 app.use("/api/productGategorys", productGategorysRouter);
+app.use("/api/user", userRouter);
+app.use("/api/order", orderRouter);
 
 // app.use(express.static(path.join("client/build")));
 
